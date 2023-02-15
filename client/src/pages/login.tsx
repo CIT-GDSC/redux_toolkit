@@ -8,7 +8,7 @@ export const Login: React.FC = () => {
 
   const GoogleButton = (): JSX.Element => {
     const divRef = useRef<HTMLDivElement>(null);
-
+    // console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID)
     useEffect(() => {
       if (typeof window === "undefined" || !window.google || !divRef.current) {
         return;
@@ -17,7 +17,7 @@ export const Login: React.FC = () => {
       try {
         window.google.accounts.id.initialize({
           ux_mode: "popup",
-          client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+          client_id: "196863214508-iob4k6egtsh2f445l2cbe6lhe3tslqcl.apps.googleusercontent.com",
           callback: async (res: CredentialResponse) => {
             if (res.credential) {
               login(res);
