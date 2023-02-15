@@ -14,7 +14,7 @@ export const Login: React.FC = () => {
       if (typeof window === "undefined" || !window.google || !divRef.current) {
         return;
       }
-
+      
       try {
         window.google.accounts.id.initialize({
           ux_mode: "popup",
