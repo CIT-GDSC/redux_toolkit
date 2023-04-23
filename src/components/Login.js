@@ -90,6 +90,7 @@ const Login = () => {
                     value={pwd}
                     required
                 />
+                <button>SignIn</button>
             </form>
         </section>
     )
