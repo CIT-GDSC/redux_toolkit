@@ -3,8 +3,8 @@ import React, { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
-import { setCredentials } from '../features/auth/authSlice'
-import { useLoginMutation } from '../features/auth/authApiSlice'
+import { setCredentials } from './authSlice'
+import { useLoginMutation } from './authApiSlice'
 import { useDispatch } from 'react-redux';
 
 
