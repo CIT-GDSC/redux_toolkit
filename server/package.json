@@ -1,0 +1,30 @@
+{
+  "name": "redux-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domains18/redux_sample.git"
+  },
+  "author": "Domains18",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Domains18/redux_sample/issues"
+  },
+  "homepage": "https://github.com/Domains18/redux_sample#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.4",
+    "uuid": "^9.0.0"
+  }
+}
