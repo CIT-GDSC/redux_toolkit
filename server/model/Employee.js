@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const employeeschema = new Schema({
     firstName: { type: String, required: true },
-    lastName: { type: String, required: true},
+    lastName: { type: String, required: true },
 }, { collection: "employees" });
 
 
