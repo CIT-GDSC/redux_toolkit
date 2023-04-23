@@ -13,15 +13,20 @@ import RequireAuth from "./features/auth/RequireAuth";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={Layout}>
+      
+      <Route path="/" element={<Layout />}>
+
         {/* Public routes (nested) */}
         <Route index element={<Public />} />
         <Route path="/login" element={<Login />} />
+
         {/* Protected Routes */}
         <Route element={<RequireAuth />}>
-          <Route path="welcome" element={<Welcome/>}/>
+          <Route path="welcome" element={<Welcome />} />
         </Route>
+
       </Route>
+
     </Routes>
   )
 }
