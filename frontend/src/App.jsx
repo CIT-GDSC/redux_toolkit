@@ -8,6 +8,7 @@ import Login from './features/auth/Login';
 import Welcome from "./features/auth/Welcome";
 import RequireAuth from "./features/auth/RequireAuth";
 
+import './App.css'
 
 
 const App = () => {

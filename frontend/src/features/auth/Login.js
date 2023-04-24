@@ -21,7 +21,7 @@ const Login = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        useRef.current.focus()
+        userRef.current.focus()
     }, []);
 
     useEffect(() => {
