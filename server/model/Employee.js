@@ -7,4 +7,4 @@ const employeeschema = new Schema({
 }, { collection: "employees" });
 
 
-module.exports = mongoose.modell('Employee', employeeschema);
+module.exports = mongoose.model('Employee', employeeschema);
