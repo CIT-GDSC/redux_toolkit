@@ -10,8 +10,8 @@ const loginHandler = expressAsyncHandler(async (req, res) => {
         const cookies = req.cookies;
         const { user, pwd } = req.body;
         if (!user || !pwd) return res.status(400).json({ "message": "Empty Fields detected, cannot proceed" });
-        const foundUser = await user.findOne({ username: user }).exec();
-        if (!foundUser) return res.sendStatus(401) // unauthorized
+        const foundUser = await User.findOne({ username: user }).exec();
+        if (!foundUser) return res.sendStatus(401) .json({"message": "User not found"})// unauthorized
         //password integrity
         const match = await bcrypt.compare(pwd, foundUser.password);
         if (match) {
