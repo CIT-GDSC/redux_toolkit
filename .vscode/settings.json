@@ -1,3 +1,5 @@
 {
-    "editor.fontFamily": "\"JetBrains Mono, Fira Code\""
+    "editor.fontFamily": "\"JetBrains Mono\" 'monospace', monospace",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 13
 }
