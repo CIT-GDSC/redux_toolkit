@@ -48,7 +48,7 @@ const loginHandler = expressAsyncHandler(async (req, res) => {
 
                 res.clearCookie('jwt', { httpOnly: true, secure: true, sameSite: 'None' });
             }
-            
+
             //saving refresh token with current user
             foundUser.refreshToken = [...newRefreshTokenArray, newRefreshToken];
             const result = await foundUser.save();
