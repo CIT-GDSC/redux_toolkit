@@ -22,5 +22,18 @@ const createNewEmployee = expressAsyncHandler(async (req, res) => {
     }
 });
 
+const updateEmployee = expressAsyncHandler(async (req, res) => {
+    if (!req?.body?.id) {
+        return res.status(400).json({ "message": " ID parameter not passed, cannot proceed" });
 
+    }
+    const employeeToUpdate = await Employee.findOne({ _id: req.body.id }).exec();
+    if (!employeeToUpdate) {
+        res.status(204).json({"message": `The parameters with ID ${req.body.id} did not match any records`})
+    }
+    if (req.body?.firstName) employeeToUpdate.firstName = req.body.firstName;
+    if (req.body?.lastName) employeeToUpdate.lastName = req.body.lastName;
+    const result = await employeeToUpdate.save();
+    res.json(result);
+});
 
