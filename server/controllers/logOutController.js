@@ -15,7 +15,6 @@ const handleLogout = expressAsyncHandler(async (req, res) => {
         return res.sendStatus(204);
     }
 
-
     //delete refreshToken in the database
     foundUser.refreshToken = foundUser.refreshToken.filter(rt => rt !== refreshToken);
     const result = await foundUser.save();
